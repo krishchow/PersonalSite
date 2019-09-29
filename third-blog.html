@@ -162,6 +162,7 @@ def add(linkedlist: node, value) -> node:
 	head.next = newNode
 	return linkedlist
 </pre>
+                                    <p>This code works by first copying the pointer to the head list first. Then, we can proceed to walk the list by going from node from node until we reach the last node. Then we set the next value of the last node to be our new node.</p>
                                     <p>Lastly, to remove from a linked list, we need to limit our input to value or the node itself. If we take in value, then we need to ensure the callers is aware that we will remove the first node with that value. For the latter, the value does not matter, since we can directly compare objects. For this example, see the snippet below:</p>
 <pre>
 def remove(linkedlist: node, target: node) -> node:
@@ -175,6 +176,7 @@ def remove(linkedlist: node, target: node) -> node:
     #explict case where target not in head
     return linkedlist
 </pre>
+                                    <p>This code defines an explicit case for the first node in the list. Then, for all other cases we traverse the tree until we either reach the end or until the next node is the target node. We check if the next node is the target node; because we can then update the pointer to exclude the target node from the list. We achieve through the last block we were verify the next node is the target, as opposed to the end, then we update the pointer to skip over the target node.</p>
                                     <p>
                                         That’s all for this week’s blog, I’m looking forward to seeing you again next week!
                                         <br>
